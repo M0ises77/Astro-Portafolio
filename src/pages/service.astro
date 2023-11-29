@@ -1,0 +1,43 @@
+---
+import Menu from "../components/Menu.astro";
+import TitlePage from "../components/TitlePage.astro";
+import CardService from "../components/CardService.astro";
+
+const service =[
+    
+{
+    titulo:"Web Development",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ullam odit similique tempora magnam vero commodi molestiae molestias sint, expedita, ratione illo recusandae assumenda explicabo inventore, nisi aut illum quas?",
+    
+},
+{
+    titulo:"Consultation",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ullam odit similique tempora magnam vero commodi molestiae molestias sint, expedita, ratione illo recusandae assumenda explicabo inventore, nisi aut illum quas?",
+    
+},
+{
+    titulo:"Consultation",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ullam odit similique tempora magnam vero commodi molestiae molestias sint, expedita, ratione illo recusandae assumenda explicabo inventore, nisi aut illum quas?",
+    
+}
+
+];
+---
+
+<Menu></Menu>
+
+<section class="bg-gray-200 pt-20 pb-28 px-8">
+    <div class="max-w-6xl">
+<TitlePage title="servvice" subtitle="Here's what I offer">        </TitlePage>
+<div class="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+    {service.map ((item) => 
+        <CardService title={item.titulo} description={item.desc}>    </CardService>
+        
+        )
+        }    
+</div>
+    </div>
+</section>
+
+
+
